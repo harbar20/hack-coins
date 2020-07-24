@@ -51,7 +51,7 @@ def generate():
 @app.route("/qrcode", methods=["GET", "POST"])
 def qrcode():
     # Generates the QR Code
-    gen = GPQRGen("http://0.0.0.0:3000", flask.session["amount"])
+    gen = GPQRGen("https://coins.hackclub.com", flask.session["amount"])
     gpqrcode = gen.generate()
     qrcodeUUID = gen.getUUID()
 
